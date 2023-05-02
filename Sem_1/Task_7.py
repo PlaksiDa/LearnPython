@@ -10,6 +10,6 @@
 year = int(input("Введите год: "))
 
 if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
-    print("Является")
+    print("YES")
 else:
-    print("Не является")
+    print("NO")

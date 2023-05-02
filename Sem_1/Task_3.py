@@ -9,6 +9,8 @@
 class1 = int(input("Количество учеников в 1 классе: "))
 class2 = int(input("Количество учеников во 2 классе: "))
 class3 = int(input("Количество учеников в 3 классе: "))
-sum_students = class1 + class2 + class3
-sum_desks = (sum_students // 2) + (sum_students % 2)
-print(f"Необходимо купить {sum_desks} парт")
+
+print(f"Необходимо купить {(class1 // 2 + class1 % 2) + (class2 // 2 + class2 % 2) + (class3 // 2 + class3 % 2)} парты")
+print(class1 // 2, class1 % 2)
+print(class2 // 2, class2 % 2)
+print(class3 // 2, class3 % 2)
