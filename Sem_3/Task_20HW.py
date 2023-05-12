@@ -19,6 +19,26 @@
 # Будем считать, что на вход подается только одно слово, которое содержит либо только
 # английские, либо только русские буквы.
 
+# letter_score = {
+#     "AEIOULNSTR": 1,
+#     "DG": 2,
+#     "BCM": 3,
+#     "PFHVWY": 4,
+#     "K": 5,
+#     "JX": 8,
+#     "QZ": 10,
+# }
+
+# word = input ("Введите слово: ")
+# score = 0
+
+# for letter in word.upper():
+#     for letters in letter_score:
+#         if letter in letters:
+#             score += letter_score.get(letters)
+
+# print(f"Стоимость слова {word}: {score} очков.")
+
 letter_score = {
     "A": 1,
     "E": 1,
