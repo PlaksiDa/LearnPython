@@ -25,10 +25,14 @@ for i in range(0, n + 1):
 
 print(my_dict)
 my_sum = 0
+berry_count = []
 
 for i in my_dict:
-    print(
+    berry_count.append(
         my_dict.get(my_list[i - 1])
         + my_dict.get(my_list[i])
         + my_dict.get(my_list[(i + 1) % len(my_list)])
     )
+
+print(berry_count)
+print(f"Максимальное число ягод, которое может собрать за один заход модуль: {max(berry_count)}")
