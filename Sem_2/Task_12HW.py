@@ -7,7 +7,7 @@
 a = int(input("Укажите сумму двух чисел: "))
 b = int(input("Укажите произведение двух чисел: "))
 
-for i in range(a):
-    for j in range(b):
+for i in range(1000):
+    for j in range(1000):
         if a == i + j and b == i * j:
             print(f"Это числа {i} и {j}")

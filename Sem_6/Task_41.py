@@ -9,7 +9,6 @@
 
 import random
 
-
 def gen_list(n):
     my_list = [random.randint(1, 10) for i in range(n)]
     return my_list

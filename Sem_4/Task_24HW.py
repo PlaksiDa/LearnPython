@@ -14,25 +14,26 @@
 
 import random
 
-n = int(input("Введите число кустов: "))
-my_dict = {}
+bush_amount = int(input("Введите число кустов: "))
 
-my_list = [i for i in range(0, n + 1)]
-print(my_list)
+list_bush = [random.randint(50, 100) for bush in range(bush_amount)]
+print(list_bush)
 
-for i in range(0, n + 1):
-    my_dict[i] = random.randint(0, 10)
+max_barries = 0
+list_barries = []
+temp = 0
 
-print(my_dict)
-my_sum = 0
-berry_count = []
+for i in range(bush_amount):
+    if i < bush_amount - 1:
+        temp = list_bush[i - 1] + list_bush[i] + list_bush[i + 1]
+        list_barries.append(temp)
+        if temp > max_barries:
+            max_barries = temp
+    else:
+        temp = list_bush[i - 1] + list_bush[i] + list_bush[0]
+        list_barries.append(temp)
+        if temp > max_barries:
+            max_barries = temp
 
-for i in my_dict:
-    berry_count.append(
-        my_dict.get(my_list[i - 1])
-        + my_dict.get(my_list[i])
-        + my_dict.get(my_list[(i + 1) % len(my_list)])
-    )
-
-print(berry_count)
-print(f"Максимальное число ягод, которое может собрать за один заход модуль: {max(berry_count)}")
+print(list_barries)        
+print(f"Макссимальное число ягод, которе можно собрать: {max_barries}")

@@ -7,7 +7,7 @@ import random
 
 
 def gen_list(n):
-    my_list1 = [random.randint(1, 10) for i in range(n)]
+    my_list1 = [random.randint(1, 10) for _ in range(n)]
     return my_list1
 
 
